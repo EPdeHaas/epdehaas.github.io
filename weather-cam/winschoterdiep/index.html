@@ -13,7 +13,6 @@
 
             body {
                 margin: 0;
-                pointer-events: none;
 
                 &:after {
                     content: '';
@@ -24,6 +23,7 @@
                     bottom: 0;
                     backdrop-filter: blur(3px);
                     mask: linear-gradient(black 10%, transparent 40%, black 90%);
+                    pointer-events: none;
                 }
             }
 
@@ -31,7 +31,7 @@
                 filter: saturate(1.8) contrast(1.2) brightness(1.1);
                 -webkit-filter: saturate(1.8) contrast(1.2) brightness(1.1);
             }
-            
+
             iframe {
                 display: block;
                 position: absolute;
@@ -46,6 +46,6 @@
     </head>
 
     <body>
-        <iframe id="player" src="https://www.youtube.com/embed/v_VQRn98Bk8?autoplay=1&mute=1&frameborder=0&controls=0"></iframe>
+        <iframe id="player" src="https://www.youtube.com/embed/v_VQRn98Bk8?autoplay=1&mute=1&frameborder=0&controls=1"></iframe>
     </body>
 </html>
