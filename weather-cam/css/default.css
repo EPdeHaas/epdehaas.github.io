@@ -19,10 +19,11 @@ html, body {
 }
 
 .video-grid-cell {
+    width: 25%;
 }
 
 .video-grid-cell.large-cell {
-/*    height: calc( ( .50vw / 16 ) * 9 );*/
+    width: 50%;
 }
 
 /*
