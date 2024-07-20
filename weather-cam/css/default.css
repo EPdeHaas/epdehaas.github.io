@@ -49,5 +49,6 @@ html, body {
     right: 0px;
     bottom: 0px;
     padding: 10px;
-    background-color: #0F0;
+    color: var( --base-fg-color );
+    background-color: #0f0f0f80;
 }
