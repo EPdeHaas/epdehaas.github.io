@@ -1,6 +1,7 @@
 
 body {
     pointer-events: none;
+    background-color: var(--video-bg-color);
 
     &:after {
         content: '';

@@ -16,6 +16,7 @@ html, body {
 }
 
 .video-grid-cell {
+    display: block;
     height: calc( ( .25vw / 16 ) * 9 );
 }
 
