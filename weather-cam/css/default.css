@@ -14,12 +14,15 @@ html, body {
     width: 100%;
 }
 
-.video-grid-cell {
+.video-grid tr {
     height: calc( ( .25vw / 16 ) * 9 );
 }
 
+.video-grid-cell {
+}
+
 .video-grid-cell.large-cell {
-    height: calc( ( .50vw / 16 ) * 9 );
+/*    height: calc( ( .50vw / 16 ) * 9 );*/
 }
 
 /*
