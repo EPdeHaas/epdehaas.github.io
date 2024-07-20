@@ -29,15 +29,25 @@ html, body {
     width: 50%;
 }
 
+.video-grid-cell a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .video-grid-cell img {
-    position: relative;
+    position: absolute;
+    top: 0px;
     width: 100%;
     height: 100%;
 }
 
 .video-grid-cell label {
-    position: relative;
-    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
     bottom: 0px;
+    padding: 10px;
     background-color: #0F0;
 }
