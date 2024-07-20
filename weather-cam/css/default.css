@@ -11,6 +11,20 @@ html, body {
 }
 
 .video-grid {
+    width: 100%;
+}
+
+.video-grid-cell {
+    display: block;
+    height: calc( ( .25vw / 16 ) * 9 );
+}
+
+.video-grid-cell.large-cell {
+    height: calc( ( .50vw / 16 ) * 9 );
+}
+
+/*
+.video-grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
@@ -24,3 +38,4 @@ html, body {
     height: calc( ( .50vw / 16 ) * 9 );
     grid-column: span 2;
 }
+*/
