@@ -62,7 +62,7 @@ function createTile ( cam ) {
     preview.src = `./${ cam.id }/image.png`;
 
     let label = document.createElement( 'label' );
-    preview.innerText = cam.name;
+    label.innerText = cam.name;
 
     let link = document.createElement( 'a' );
     link.target = '_blank';
