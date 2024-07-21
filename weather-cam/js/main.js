@@ -28,19 +28,23 @@ function setup () {
     let i = 0, j = 0, hadLarge = false;;
     for ( let cam of cams ) {
         if ( j == 0 ) {
+            console.log( 'create new row' );
             row = document.createElement( 'tr' );
             table.appendChild( row );
 
             if ( hadLarge ) {
+                console.log( 'skip to cells' );
                 j = 2;
                 hadLarge = false;
             }
         }
 
         if ( cam.large ) {
+            console.log( 'create a large tile' );
             tile = createLargeTile( cam );
             j = ( ++j ) % 4;
         } else {
+            console.log( 'create a regular tile' );
             tile = createTile( cam );
         }
 
