@@ -42,6 +42,7 @@ function setup () {
         if ( cam.large ) {
             console.log( 'create a large tile' );
             tile = createLargeTile( cam );
+            hadLarge = true;
             j = ( ++j ) % 4;
         } else {
             console.log( 'create a regular tile' );
