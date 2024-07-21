@@ -1,6 +1,6 @@
 
-const videos = [
-    { id: "boumaboulevard",         name: "Boumaboulevard" },
+const ts_cams = [
+    { id: "boumaboulevard",         name: "Boumaboulevard",         large: true },
     { id: "europaweg",              name: "Europaweg" },
     { id: "friesestraatweg",        name: "Friesestraatweg" },
     { id: "gasunie",                name: "Gasunie" },
@@ -20,11 +20,91 @@ const videos = [
 ]
 
 function setup () {
-    let table = document.querySelector('.video-grid');
+    let table   = document.querySelector( '.video-grid' );
+    let cams    = ts_cams.slice();
 
-    for ( let i of videos ) {
-        console.log( i );
+    let row, tile, cam; 
+
+    /*
+    row = document.createElement( 'tr' );
+    table.appendChild( row );
+    
+    cam = cams.shift();
+    tile = createLargeTile( cam );
+    row.appendChild( tile );
+
+    cam = cams.shift();
+    tile = createTile( cam );
+    row.appendChild( tile );
+
+    cam = cams.shift();
+    tile = createTile( cam );
+    row.appendChild( tile );
+
+    row = document.createElement( 'tr' );
+    table.appendChild( row );
+    
+    cam = cams.shift();
+    tile = createTile( cam );
+    row.appendChild( tile );
+
+    cam = cams.shift();
+    tile = createTile( cam );
+    row.appendChild( tile );
+    */
+
+    let i = 0, j = 0, hadLarge = false;;
+    for ( let cam of cams ) {
+        if ( j == 0 ) {
+            row = document.createElement( 'tr' );
+            table.appendChild( row );
+
+            if ( hadLarge ) {
+                j = 2;
+                hadLarge = false;
+            }
+        }
+
+        if ( cam.large ) {
+            tile = createLargeTile( cam );
+            j = ( ++j ) % 4;
+        } else {
+            tile = createTile( cam );
+        }
+
+        row.appendChild( tile );
+        j = ( ++j ) % 4;
     }
+
+}
+
+function createTile ( cam ) {
+    let preview = document.createElement( 'img' );
+    preview.src = `./img/${ cam.id }.png`;
+
+    let label = document.createElement( 'label' );
+    preview.innerText = cam.name;
+
+    let link = document.createElement( 'a' );
+    link.target = '_blank';
+    link.href   = `${ cam.id }/`;
+    link.appendChild(preview);
+    link.appendChild(label);
+
+    let tile = document.createElement( 'td' );
+    tile.classList.add( 'video-grid-cell' );
+    tile.appendChild( link );
+
+    return tile;
+}
+
+function createLargeTile ( cam ) {
+    let tile = createTile ( cam );
+    tile.colSpan = 2;
+    tile.rowSpan = 2;
+    tile.classList.add( 'large-cell' );
+
+    return tile;
 }
 
 window.addEventListener( "load", setup );
