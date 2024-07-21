@@ -23,35 +23,7 @@ function setup () {
     let table   = document.querySelector( '.video-grid' );
     let cams    = ts_cams.slice();
 
-    let row, tile, cam; 
-
-    /*
-    row = document.createElement( 'tr' );
-    table.appendChild( row );
-    
-    cam = cams.shift();
-    tile = createLargeTile( cam );
-    row.appendChild( tile );
-
-    cam = cams.shift();
-    tile = createTile( cam );
-    row.appendChild( tile );
-
-    cam = cams.shift();
-    tile = createTile( cam );
-    row.appendChild( tile );
-
-    row = document.createElement( 'tr' );
-    table.appendChild( row );
-    
-    cam = cams.shift();
-    tile = createTile( cam );
-    row.appendChild( tile );
-
-    cam = cams.shift();
-    tile = createTile( cam );
-    row.appendChild( tile );
-    */
+    let row, tile;
 
     let i = 0, j = 0, hadLarge = false;;
     for ( let cam of cams ) {
