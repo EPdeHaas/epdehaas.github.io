@@ -8,6 +8,7 @@ html, body {
     color: var( --base-fg-color );
     background-color: var( --base-bg-color );
     overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .flex-container {
@@ -32,6 +33,7 @@ html, body {
     height: calc( ( 25vw / 16 ) * 9 );
 }
 
+/*
 .video-grid-cell {
     position: relative;
     width: 25%;
@@ -40,6 +42,7 @@ html, body {
 .video-grid-cell.large-cell {
     width: 50%;
 }
+*/
 
 .video-grid-cell a {
     display: block;
