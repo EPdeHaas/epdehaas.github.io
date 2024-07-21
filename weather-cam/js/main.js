@@ -3,19 +3,18 @@ const ts_cams = [
     { id: "grote-markt",            name: "Grote Markt",            large: true },
     { id: "grote-markt-2",          name: "Grote Markt 2" },
     { id: "stationsweg",            name: "Stationsweg" },
-
-    { id: "boumaboulevard",         name: "Boumaboulevard" },
+    { id: "winschoterdiep",         name: "Winschoterdiep",         large: true },
     { id: "europaweg",              name: "Europaweg" },
-    { id: "friesestraatweg",        name: "Friesestraatweg" },
-    { id: "gasunie",                name: "Gasunie" },
+    { id: "zuiderplantsoen",        name: "Zuiderplantsoen" },
     { id: "julianaplein",           name: "Julianaplein" },
     { id: "julianaplein-2",         name: "Julianaplein 2" },
+    { id: "boumaboulevard",         name: "Boumaboulevard" },
+    { id: "friesestraatweg",        name: "Friesestraatweg" },
+    { id: "gasunie",                name: "Gasunie" },
     { id: "laan-corpus-den-hoorn",  name: "Laan Corpus den Hoorn" },
     { id: "overwinningsplein",      name: "Overwinningsplein" },
     { id: "paterswoldseweg",        name: "Paterswoldseweg" },
     { id: "vrijheidsplein",         name: "Vrijheidsplein" },
-    { id: "winschoterdiep",         name: "Winschoterdiep" },
-    { id: "zuiderplantsoen",        name: "Zuiderplantsoen" },
 
     //{ id: "hoofdstation",           name: "Hoofdstation" },
     //{ id: "hoofdstation-2",         name: "Hoofdstation 2" },
@@ -24,6 +23,7 @@ const ts_cams = [
 function setup () {
     let table   = document.querySelector( '.video-grid' );
     let cams    = ts_cams.slice();
+    let width   = 4;
 
     let row, tile;
 
@@ -45,14 +45,14 @@ function setup () {
             console.log( 'create a large tile' );
             tile = createLargeTile( cam );
             hadLarge = true;
-            j = ( ++j ) % 4;
+            j = ( ++j ) % width;
         } else {
             console.log( 'create a regular tile' );
             tile = createTile( cam );
         }
 
         row.appendChild( tile );
-        j = ( ++j ) % 4;
+        j = ( ++j ) % width;
     }
 
 }
