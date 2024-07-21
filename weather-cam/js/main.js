@@ -3,27 +3,27 @@ const ts_cams = [
     { id: "grote-markt",            name: "Grote Markt",            large: true },
     { id: "grote-markt-2",          name: "Grote Markt 2" },
     { id: "stationsweg",            name: "Stationsweg" },
-    { id: "winschoterdiep",         name: "Winschoterdiep",         large: true },
     { id: "europaweg",              name: "Europaweg" },
     { id: "zuiderplantsoen",        name: "Zuiderplantsoen" },
+    { id: "winschoterdiep",         name: "Winschoterdiep",         large: true },
     { id: "julianaplein",           name: "Julianaplein" },
     { id: "julianaplein-2",         name: "Julianaplein 2" },
+    { id: "vrijheidsplein",         name: "Vrijheidsplein" },
+    { id: "gasunie",                name: "Gasunie" },
     { id: "boumaboulevard",         name: "Boumaboulevard" },
     { id: "friesestraatweg",        name: "Friesestraatweg" },
-    { id: "gasunie",                name: "Gasunie" },
     { id: "laan-corpus-den-hoorn",  name: "Laan Corpus den Hoorn" },
     { id: "overwinningsplein",      name: "Overwinningsplein" },
     { id: "paterswoldseweg",        name: "Paterswoldseweg" },
-    { id: "vrijheidsplein",         name: "Vrijheidsplein" },
 
-    //{ id: "hoofdstation",           name: "Hoofdstation" },
-    //{ id: "hoofdstation-2",         name: "Hoofdstation 2" },
+    { id: "hoofdstation",           name: "Hoofdstation" },
+    { id: "hoofdstation-2",         name: "Hoofdstation 2" },
 ]
 
 function setup () {
     let table   = document.querySelector( '.video-grid' );
     let cams    = ts_cams.slice();
-    let width   = 4;
+    let width   = 5;
 
     let row, tile;
 
