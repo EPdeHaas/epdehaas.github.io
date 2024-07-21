@@ -59,7 +59,7 @@ function setup () {
 
 function createTile ( cam ) {
     let preview = document.createElement( 'img' );
-    preview.src = `./${ cam.id }/screen.png`;
+    preview.src = `./${ cam.id }/image.png`;
 
     let label = document.createElement( 'label' );
     preview.innerText = cam.name;
