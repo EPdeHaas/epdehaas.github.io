@@ -30,7 +30,7 @@ html, body {
 
 .video-grid tr {
     position: relative;
-    height: calc( ( 25vw / 16 ) * 9 );
+    /*height: calc( ( 25vw / 16 ) * 9 );*/
 }
 
 /*

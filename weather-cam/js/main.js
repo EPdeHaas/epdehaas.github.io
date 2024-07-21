@@ -32,6 +32,7 @@ function setup () {
         if ( j == 0 ) {
             console.log( 'create new row' );
             row = document.createElement( 'tr' );
+            row.style.height = `calc( ( ${ 100 / width }vw / 16 ) * 9 )`;
             table.appendChild( row );
 
             if ( hadLarge ) {
