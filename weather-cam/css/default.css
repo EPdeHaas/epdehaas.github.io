@@ -33,12 +33,12 @@ html, body {
     /*height: calc( ( 25vw / 16 ) * 9 );*/
 }
 
-/*
 .video-grid-cell {
     position: relative;
-    width: 25%;
+    /*width: 25%;*/
 }
 
+/*
 .video-grid-cell.large-cell {
     width: 50%;
 }
