@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./tiltshift.css">
+        <script>
+
+            addEventListener( 'load', function() {
+                let args = location_getargs();
+                console.log( args );
+
+                let frame = document.querySelector( '#player' );
+                frame.src = `https://www.youtube.com/embed/${ args.id }?autoplay=1&mute=1&frameborder=0&controls=0`;
+            } );
+
+            function location_getargs () {
+                let argr = location.search.substring( 1 ).split( '&' );
+                let args = [];
+                for ( let next of argr ) {
+                    let key_value = next.split( '=' );
+                    args[ key_value[ 0 ] ] = key_value[ 1 ]? key_value[ 1 ] : true;
+                }
+
+                return args;
+            };
+
+        </script>
+    </head>
+    
+    <body>
+        <iframe id="player"></iframe>
+    </body>
+</html>
