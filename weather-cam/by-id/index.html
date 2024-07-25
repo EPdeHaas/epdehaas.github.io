@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+
+            addEventListener( 'load', function() {
+                let args = location_getargs();
+
+                console.log( args );
+            } )
+
+            function location_getargs () {
+                let argr = location.search.substring( 1 ).split( '&' );
+                let args = [];
+                for ( let next of argr ) {
+                    let key_value = next.split( '=' );
+                    args[ key_value[ 0 ] ] = key_value[ 1 ]? key_value[ 1 ] : true;
+                }
+            }
+
+        </script>
+    </head>
+    
+    <body>
+    
+    </body>
+</html>
