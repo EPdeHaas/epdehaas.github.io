@@ -14,7 +14,9 @@
                 let frame = document.querySelector( '#player' );
                 frame.src = `https://www.youtube.com/embed/${ args.id }?autoplay=1&mute=1&frameborder=0&controls=0`;
 
-                document.body.setAttribute( 'blur', 'none' );
+                if ( args.blur ) {
+                    document.body.setAttribute( 'blur', args.blur );
+                }
             } );
 
             function location_getargs () {
