@@ -40,7 +40,7 @@ iframe {
     top:        50%;
     left:       50%;
     border:     none;
-    width:      max( calc( ( 100vh / 9 ) * 16 ), 100vw );
-    height:     max( calc( ( 100vw / 16 ) * 9 ), 100vh );
+    width:      max( calc( ( 100vh / 9 ) * 16 + 2px ), 100vw );
+    height:     max( calc( ( 100vw / 16 ) * 9 + 2px ), 100vh );
     transform:  translate( -50%, -50% );
 }
